@@ -371,8 +371,8 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 10px;
+    gap: 21px;
     padding-top: 21px;
-    gap: 21px 21px;
   }
 
   .cover__images-item:nth-child(1) {
