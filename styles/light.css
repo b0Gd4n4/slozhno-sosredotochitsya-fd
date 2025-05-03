@@ -5,7 +5,7 @@
 */
 
 :root.theme-light {
-  --main-font-family: "IBM Plex Mono" "Bold Regular";
+  --main-font-family: "IBM Plex Mono";
   --accent-color: #ff8dcb;
   --main-color: #fff1f7;
   --text-color: #353430;
