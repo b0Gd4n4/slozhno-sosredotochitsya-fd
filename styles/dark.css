@@ -1,5 +1,4 @@
 :root.theme-dark {
-  --main-font-family: "IBM Plex Mono";
   --accent-color: #ff0070;
   --main-color: #000028;
   --text-color: #f1b2ce;
@@ -12,6 +11,9 @@
   --decor-color: #ff0070;
   --decor-content-color: #ff0070;
   --shadow-color: #ff0070;
+  --button-color: #FF007066;
+  --text-button-color: #ff0070;
+  --border-color: #ff0070;
 }
 
 .theme-dark .header__lamp {

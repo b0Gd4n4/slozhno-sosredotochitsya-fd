@@ -3,14 +3,18 @@
 .page {
   font-family: var(--main-font-family);
   background-color: var(--main-color);
+  background-image: var(--header-bg-image);
   inline-size: 375px;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
+   margin: 0 auto;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--border-color);
 }
 
 .decorated-zone::after {
@@ -39,14 +43,11 @@
 
 header {
   display: grid;
-  background-image: var(--header-bg-image);
   grid-template-rows: 1fr min-content 1fr;
   min-block-size: 668px;
   color: var(--accent-color);
   font-size: var(--content-font-size);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
 }
 
 .title__decore {
@@ -85,7 +86,6 @@ header {
 .header__theme-menu {
   display: flex;
   justify-content: end;
-  max-height: 98px;
   padding-right: 11px;
   padding-top: 74px;
 }
@@ -98,7 +98,7 @@ header {
 
 .header__theme-menu-button {
   background-color: transparent;
-  color: var(--accent-color);
+  color: var(--text-button-color);
   font-family: var(--main-font-family);
   font-weight: 400;
   font-size: var(--content-font-size);
@@ -110,10 +110,7 @@ header {
   height: 26px;
   gap: 10px;
 }
-.header__container {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .header__cover {
   padding-left: 10px;
@@ -126,7 +123,6 @@ header {
 }
 
 .header__title {
-  min-height: 117px;
   padding-top: 55px;
   padding-right: 10px;
   padding-left: 10px;
@@ -141,6 +137,10 @@ header {
 
 .decorated-zone {
   position: relative;
+}
+
+.main {
+  background-color: var(--main-color);
 }
 
 .cover {
@@ -173,6 +173,7 @@ header {
   font-weight: 400;
   font-size: var(--content-font-size);
   line-height: 23.4px;
+  color: var(--text-cover);
 }
 
 .cover__text {
@@ -233,10 +234,12 @@ header {
 
 .footer {
   display: grid;
+  height: 100vh;
   margin-top: 40px;
   min-block-size: 667px;
   justify-content: center;
   align-items: center;
+  background-color: var(--main-color);
 }
 
 .footer__cover {
@@ -248,24 +251,28 @@ header {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--button-color);
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .link:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .link:focus-visible {
-  outline: 1px solid var(--text-color);
+  border: 1px solid var(--text-color);
+  
 }
 
 @media (width >= 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .page {
     inline-size: 768px;
   }
@@ -294,10 +301,6 @@ header {
     padding-right: 21px;
   }
 
-  .header__container {
-    flex-direction: row;
-    gap: 62px;
-  }
 
   .header__cover {
     padding-left: 0px;
@@ -323,6 +326,7 @@ header {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     column-gap: 20px;
+    grid-auto-flow: row;
   }
   .cover__title {
     grid-column: 1 / 2;
@@ -349,6 +353,7 @@ header {
     grid-template-rows: auto;
     margin-top: 60px;
     column-gap: 20px;
+    grid-auto-flow: row;
   }
 
   .concentration-tips__info-title {
@@ -372,6 +377,7 @@ header {
     grid-template-rows: repeat(3, auto);
     gap: 21px;
     padding-top: 21px;
+    grid-auto-flow: row;
   }
 
   .cover__images-item:nth-child(1) {
@@ -400,12 +406,16 @@ header {
   }
 
   .footer {
-    height: 1024px;
+    min-height: 1024px;
     margin-top: 60px;
   }
 }
 
 @media (width >= 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .page {
     inline-size: 1024px;
   }
@@ -414,9 +424,6 @@ header {
     min-height: 768px;
   }
 
-  .header__container {
-    gap: 84px;
-  }
 
   .header__cover {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -444,12 +451,14 @@ header {
 
   .cover__content {
     column-gap: 10px;
+    grid-auto-flow: column;
   }
 
   .attention-reduction-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+    grid-auto-flow: row;
   }
 
   .attention-reduction__title {
@@ -470,10 +479,11 @@ header {
 
   .concentration-tips {
     column-gap: 10px;
+    grid-auto-flow: row;
   }
 
   .footer {
-    height: 768px;
+    min-height: 768px;
     margin-top: 60px;
   }
 

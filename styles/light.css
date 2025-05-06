@@ -5,7 +5,6 @@
 */
 
 :root.theme-light {
-  --main-font-family: "IBM Plex Mono";
   --accent-color: #ff8dcb;
   --main-color: #fff1f7;
   --text-color: #353430;
@@ -18,6 +17,10 @@
   --decor-color: #353430;
   --decor-content-color: #ff8dcb;
   --shadow-color: #ff0070;
+  --text-button-color: #353430;
+  --button-color: #32312D66;
+  --border-color: #353430;
+  ;
 }
 
 .theme-light .header__lamp {
@@ -39,6 +42,9 @@
     --decor-color: #353430;
     --decor-content-color: #ff8dcb;
     --shadow-color: #ff0070;
+    --text-button-color: #353430;
+    --button-color: #32312D66;
+    --border-color: #353430;
   }
 
   .header__lamp {
