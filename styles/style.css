@@ -4,12 +4,11 @@
   font-family: var(--main-font-family);
   background-color: var(--main-color);
   background-image: var(--header-bg-image);
-  inline-size: 375px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
 .header__theme-menu-button_active {
@@ -111,7 +110,6 @@ header {
   gap: 10px;
 }
 
-
 .header__cover {
   padding-left: 10px;
   padding-right: 10px;
@@ -137,10 +135,6 @@ header {
 
 .decorated-zone {
   position: relative;
-}
-
-.main {
-  background-color: var(--main-color);
 }
 
 .cover {
@@ -239,7 +233,6 @@ header {
   min-block-size: 667px;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
 }
 
 .footer__cover {
@@ -263,19 +256,15 @@ header {
   border-bottom: 1px solid var(--text-color);
 }
 
+.link:focus {
+  outline: 1px solid var(--text-color);
+}
+
 .link:focus-visible {
-  border: 1px solid var(--text-color);
-  
+  outline: 1px solid var(--text-color);
 }
 
 @media (width >= 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .page {
-    inline-size: 768px;
-  }
 
   .header {
     min-height: 1024px;
@@ -300,7 +289,6 @@ header {
     padding-top: 190px;
     padding-right: 21px;
   }
-
 
   .header__cover {
     padding-left: 0px;
@@ -412,18 +400,10 @@ header {
 }
 
 @media (width >= 1024px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .page {
-    inline-size: 1024px;
-  }
 
   .header {
     min-height: 768px;
   }
-
 
   .header__cover {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -456,25 +436,19 @@ header {
 
   .attention-reduction-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
     grid-auto-flow: row;
   }
 
+  .card__content {
+    grid-column: span 1;
+  }
+
   .attention-reduction__title {
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 1;
     width: 315px;
-  }
-
-  .attention-reduction__topic {
-    grid-column: span 1;
-    grid-row: 2;
-  }
-
-  .attention-reduction__text {
-    grid-column: span 1;
-    grid-row: 3;
   }
 
   .concentration-tips {
