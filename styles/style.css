@@ -61,7 +61,7 @@ header {
   line-height: 23.4px;
   color: var(--accent-color);
   justify-content: end;
-  left: 304px;
+  right: 39px;
   top: 10px;
 }
 
@@ -207,7 +207,6 @@ header {
 
 .cover__images-list {
   display: grid;
-  grid-template-rows: 142px 355px 237px 355px 237px;
   justify-content: center;
   padding-top: 11px;
   gap: 10px;
@@ -265,13 +264,12 @@ header {
 }
 
 @media (width >= 768px) {
-
   .header {
     min-height: 1024px;
   }
 
   .header__lamp {
-    left: 687px;
+    right: 49px;
     top: 21px;
   }
 
@@ -400,7 +398,6 @@ header {
 }
 
 @media (width >= 1024px) {
-
   .header {
     min-height: 768px;
   }
@@ -415,7 +412,7 @@ header {
   }
 
   .header__lamp {
-    padding-left: 256px;
+  right: 49px;
   }
 
   .header__theme-menu {
